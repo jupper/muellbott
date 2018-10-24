@@ -1,0 +1,52 @@
+<div *ngIf="user != null">
+    <span *ngIf="sent && !success" class="noSuccess">Das hat nicht geklappt!</span>
+    <span *ngIf="sent && success" class="success">Das hat geklappt, du wirst gleich weitergeleitet!</span>
+    <br>
+    <fieldset>
+        <button *ngIf="!data" (click)="setData()">Meine Daten</button>
+        <button *ngIf="!email" (click)="setEmail()">Meine Email</button>
+        <button *ngIf="!password" (click)="setPassword()">Mein Passwort</button>
+    </fieldset>
+    <br>
+    <div *ngIf="data">
+        <form>
+            <table>
+                <tr>
+                    <td><label>Vorname:</label></td><td><input #firstName required value="{{user.getFirstName()}}"/></td>
+                    <td><label>Nachname:</label></td><td><input #lastName required value="{{user.getLastName()}}"/></td>
+                </tr>
+            </table>
+        </form>
+        <fieldset>
+            <button (click)="change(firstName.value, lastName.value)">Speichern</button>
+            <button (click)="cancel()">Abbrechen</button>
+        </fieldset>
+    </div>
+    <div *ngIf="email">
+        <form>
+            <table>
+                <tr>
+                    <td><label>Email:</label></td><td><input #email required value="{{user.getEmail()}}" type="email"/></td>
+                </tr>
+            </table>
+        </form>
+        <fieldset>
+            <button (click)="changeE(email.value)">Speichern</button>
+            <button (click)="cancel()">Abbrechen</button>
+        </fieldset>
+    </div>
+    <div *ngIf="password">
+        <form>
+            <table>
+                <tr>
+                    <td><label>Neues Passwort:</label></td><td><input #newPassword required type="password"/></td>
+                    <td><label>Wiederholen:</label></td><td><input #newPasswordRe required type="password"/></td>
+                </tr>
+            </table>
+        </form>
+        <fieldset>
+            <button (click)="changeP(newPassword.value, newPasswordRe.value)">Speichern</button>
+            <button (click)="cancel()">Abbrechen</button>
+        </fieldset>
+    </div>
+</div>

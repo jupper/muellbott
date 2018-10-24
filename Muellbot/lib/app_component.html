@@ -1,0 +1,18 @@
+<img src="logo.png" width="50%">
+<h1>Müllbot</h1>
+<nav>
+    <a [routerLink]="RoutePaths.home.toUrl()"
+       [routerLinkActive]="'active'">Home</a>
+    <a *ngIf="user == null" [routerLink]="RoutePaths.newUser.toUrl()"
+       [routerLinkActive]="'active'">Anmelden</a>
+    <a *ngIf="user == null" [routerLink]="RoutePaths.logIn.toUrl()"
+       [routerLinkActive]="'active'">Einloggen</a>
+    <a *ngIf="user != null" [routerLink]="RoutePaths.myData.toUrl()"
+       [routerLinkActive]="'active'">Meine Daten</a>
+    <a *ngIf="user != null" [routerLink]="RoutePaths.selectWeeks.toUrl()"
+       [routerLinkActive]="'active'">Wochenauswahl</a>
+    <a *ngIf="user != null" [routerLink]="RoutePaths.logOut.toUrl()"
+       [routerLinkActive]="'active'">Ausloggen</a>
+</nav>
+<router-outlet [routes]="Routes.all"></router-outlet>
+

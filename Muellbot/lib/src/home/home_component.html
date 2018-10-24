@@ -1,0 +1,17 @@
+<div *ngIf="user == null">
+    <br>
+    Bitte einloggen oder anmelden.
+</div>
+
+<div *ngIf="user != null">
+    <br>
+    <h2>Hallo {{ user.getFirstName() }}</h2>
+    <br>
+    <h3>Deine nächsten Termine</h3>
+    <table>
+        <tr><th>Datum</th><th>Tonne</th></tr>
+        <tr *ngFor="let pickUpDate of user.getPickUpDates()">
+            <td>{{weekdays[pickUpDate.getPickUpDate().weekday - 1]}}: {{pickUpDate.getPickUpDate().day}}.{{pickUpDate.getPickUpDate().month}}.{{pickUpDate.getPickUpDate().year}}</td><td>{{pickUpDate.getKind()}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,13 @@
+{
+  "new user": {
+    "firstName": "Vornahme",
+    "lastName": "Nachname",
+    "email": "Email",
+    "password": "Passwort",
+    "passwordRe": "Passwort wiederholen"
+  },
+  "home": {
+    "hello": "Hallo"
+  }
+
+}

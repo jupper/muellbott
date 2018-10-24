@@ -1,0 +1,19 @@
+<span *ngIf="success && failure" class="noSuccess">Benutzername oder Passwort falsch</span>
+<span *ngIf="success && !failure" class="success">Du wurdest eingeloggt und wirst gleich weiter geleitet.</span>
+<span *ngIf="!success && failure" class="noSuccess">Bitte alle Felder ausfüllen</span>
+<br *ngIf="!success && !failure">
+<div *ngIf="!success || failure">
+    <form>
+        <table>
+            <tr>
+                <td><label>Email:</label></td><td><input #email type="email" required/></td>
+            </tr>
+            <tr>
+                <td><label>Passwort:</label></td><td><input #password type="password" required/></td>
+            </tr>
+            <tr>
+                <td><button (click)="doLogIn(email.value, password.value)">Login</button></td>
+            </tr>
+        </table>
+    </form>
+</div>

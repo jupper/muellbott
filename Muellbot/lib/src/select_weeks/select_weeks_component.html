@@ -1,0 +1,19 @@
+<div *ngIf="user != null && !success">
+    <br>
+    <h2>Bitte wähle die Wochen aus, an denen du da bist.</h2>
+    <table>
+        <tr>
+            <th></th><th>KW</th><th>Von: </th><th>Bis: </th>
+        </tr>
+        <tr *ngFor="let k of kw; let i = index">
+            <td><input type="checkbox" id="cb{{k}}"/></td><td>{{k}}</td><td>{{kwStart[i].day}}.{{kwStart[i].month}}.{{kwStart[i].year}}</td><td>{{kwEnd[i].day}}.{{kwEnd[i].month}}.{{kwEnd[i].year}}</td>
+        </tr>
+    </table>
+    <fieldset>
+        <button (click)="save()">Speichern</button><button (click)="cancel()">Abbrechen</button>
+    </fieldset>
+</div>
+
+<div *ngIf="user != null && success">
+    <span class="success">Erfolgreich gespeichert, du wirst gleich weitergeleitet.</span>
+</div>

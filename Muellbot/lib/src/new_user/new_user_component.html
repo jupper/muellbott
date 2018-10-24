@@ -1,0 +1,32 @@
+<h3>Neuen Benutzer anlegen</h3>
+<span *ngIf="created && !success" class="noSuccess">
+    Das hat nicht geklappt.
+</span>
+<span *ngIf="created && success" class="success">
+    Das hat geklappt, du wirst gleich weitergeleitet.
+</span>
+<span *ngIf="passNotCorrect" class="noSuccess">
+    Passwörter stimmen nicht überein.
+</span>
+<span *ngIf="userExist" class="noSuccess">
+    Benutzer bereits vorhanden. Bitte andere Email verwenden.
+</span>
+<span *ngIf="inputEmpty" class="noSuccess">
+    Bitte alle Felder ausfüllen.
+</span>
+
+<form>
+    <table>
+        <tr>
+            <td><label>Vorname:</label></td><td><input #firstName required/></td>
+            <td><label>Nachname:</label></td><td><input #lastName required/></td>
+        </tr><tr>
+        <td><label>Email:</label></td><td><input #email type="email" required/></td>
+    </tr><tr>
+        <td><label>Passwort:</label></td><td><input #password type="password" required/></td>
+        <td><label>Passwort wiederholen:</label></td><td><input #passwordRe type="password" required/></td>
+    </tr><tr>
+        <td><button (click)="add(firstName.value, lastName.value, email.value, password.value, passwordRe.value)">Hinzufügen</button></td>
+    </tr>
+    </table>
+</form>

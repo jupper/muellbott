@@ -1,0 +1,9 @@
+{"version":1,"sembast":1}
+{"key":1,"value":{"firstName":"m","lastName":"m","email":"m@m","password":"$5$Jn0zsuxFL3PBncEq$visQD1UGrP241XAi1oU43zqp1UI6sfgFU9wF7A6d9M."}}
+{"key":1,"deleted":true,"value":{"firstName":"m","lastName":"m","email":"m@m","password":"$5$Jn0zsuxFL3PBncEq$visQD1UGrP241XAi1oU43zqp1UI6sfgFU9wF7A6d9M."}}
+{"key":2,"value":{"firstName":"m","lastName":"m","email":"m@m","password":"$5$8mU1aChGvxx4SG2J$9CNJhKbaLovCXvA31oneirwwi880ziiApavCZ/q5cV3"}}
+{"key":2,"deleted":true,"value":{"firstName":"m","lastName":"m","email":"m@m","password":"$5$8mU1aChGvxx4SG2J$9CNJhKbaLovCXvA31oneirwwi880ziiApavCZ/q5cV3"}}
+{"key":3,"value":{"firstName":"Vorname","lastName":"Nachname","email":"m@m","password":"$5$8mU1aChGvxx4SG2J$9CNJhKbaLovCXvA31oneirwwi880ziiApavCZ/q5cV3"}}
+{"key":3,"deleted":true,"value":{"firstName":"Vorname","lastName":"Nachname","email":"m@m","password":"$5$8mU1aChGvxx4SG2J$9CNJhKbaLovCXvA31oneirwwi880ziiApavCZ/q5cV3"}}
+{"key":4,"value":{"firstName":"Vorname","lastName":"Nachname","email":"mo@mo","password":"$5$8mU1aChGvxx4SG2J$9CNJhKbaLovCXvA31oneirwwi880ziiApavCZ/q5cV3"}}
+{"key":5,"value":{"firstName":"om","lastName":"om","email":"om@om","password":"$5$1mbrCs1nrGcpJ35A$Vug0XYoxCGIj9ooDLQ8ikfgjSlnm4OMoDqIbbvs.Fw7"}}

@@ -1,0 +1,39 @@
+fieldset {
+    border: 0;
+    text-align: center
+}
+
+button {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.success {
+    color: green;
+}
+
+.noSuccess {
+    color: red;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tr td{
+    background-color: transparent;
+}
+
+table tr:hover td{
+    background-color: yellowgreen;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
